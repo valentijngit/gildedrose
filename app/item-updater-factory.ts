@@ -3,6 +3,7 @@ import { NormalItemUpdater } from "./normal-item-updater";
 import { AgedBrieUpdater } from "./aged-brie-updater";
 import { SulfurasUpdater } from "./sulfuras-updater";
 import { BackstagePassesUpdater } from "./backstage-passes-updater";
+import { ConjuredItemUpdater } from "./conjured-item-updater";
 
 export class ItemUpdaterFactory {
   static create(itemName: string): ItemUpdater {
@@ -13,6 +14,8 @@ export class ItemUpdaterFactory {
         return new SulfurasUpdater();
       case 'Backstage passes to a TAFKAL80ETC concert':
           return new BackstagePassesUpdater();
+      case 'Conjured item':
+          return new ConjuredItemUpdater();
       default:
         return new NormalItemUpdater();
     }
