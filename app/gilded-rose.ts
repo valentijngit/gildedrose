@@ -10,11 +10,8 @@ export class GildedRose {
 
   updateQuality() {
     for (const item of this.items) {
-      switch(item.name) { 
-        case 'Aged brie': {
-          
-        }
-      }
+      const updater = ItemUpdaterFactory.create(item.name);
+      updater.updateQuality(item);
     }
     return this.items;
   }
