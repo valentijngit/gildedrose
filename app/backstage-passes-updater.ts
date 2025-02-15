@@ -8,6 +8,7 @@ export class BackstagePassesUpdater implements ItemUpdater {
       item.quality = 0;
       return;
     }
+    item.quality ++;
     if(item.sellIn < 5) {
       item.quality += 2;
     }
