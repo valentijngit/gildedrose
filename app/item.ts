@@ -9,3 +9,4 @@ export class Item {
     this.quality = quality;
   }
 }
+// note to self: new insight make it immutable... allowed because of static allowance in assignment
