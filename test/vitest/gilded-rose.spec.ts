@@ -52,4 +52,14 @@ describe('Gilded Rose', () => {
     const items = gildedRose.updateQuality();
     expect(items[0].quality).toBe(0);
   });
+  it('should decrease quality by 2 for Conjured items', () => {
+    const gildedRose = new GildedRose([new Item('Conjured item', 10, 30)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(28);
+  });
+  it('should decrease quality by 4 after sell for Conjured items', () => {
+    const gildedRose = new GildedRose([new Item('Conjured item', 0, 30)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(26);
+  });
 });
